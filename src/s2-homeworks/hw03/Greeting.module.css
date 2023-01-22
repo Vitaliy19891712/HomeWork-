@@ -17,7 +17,7 @@
   line-height: 17px;
 }
 
-input {
+.input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -36,6 +36,17 @@ input {
 
 .errorInput {
   border: 1px solid #cc0000;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  width: 372px;
+  height: 36px;
+  padding: 10px 5px;
 }
 
 .button {
