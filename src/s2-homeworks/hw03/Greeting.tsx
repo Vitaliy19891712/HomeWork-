@@ -28,8 +28,7 @@ const Greeting: React.FC<GreetingPropsType> = (
 
 
   const inputClass = error ? s.errorInput : s.input; // need to fix with (?:)
-  console.log(error);
-  console.log(inputClass);
+
 
   return (
     <div id={"hw3-form"} className={s.greetingForm}>
