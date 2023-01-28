@@ -1,36 +1,80 @@
 .button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .disabled {
 }
 
 .secondary {
+  width: 176px;
+  height: 30px;
+  left: 574px;
+  top: 418px;
+
+  border: 1px solid #0066cc;
+  border-radius: 3px;
+  color: #0066cc;
 }
 
 .default {
+  width: 132px;
+  height: 30px;
+  left: 574px;
+  top: 1465px;
+  background: #0066cc;
+  border-radius: 3px;
+
+  color: #ffffff;
 }
 
 .red {
+  width: 129px;
+  height: 30px;
+  left: 576px;
+  top: 1519px;
+  background: #cc1439;
+  border-radius: 3px;
+
+  color: #ffffff;
 }
 
 .default:hover {
+  background: #0280ff;
 }
 
 .red:hover {
+  background: #f70535;
 }
 
 .secondary:hover {
+  background: #dfcfd2;
 }
 
-
 .default:active {
+  background: #4e9ff0;
 }
 
 .secondary:active {
+  background: #6b6768;
 }
 
 .red:active {
+  background: #db3959;
 }
 
 .button:disabled {
+  width: 133px;
+  height: 30px;
+  left: 574px;
+  top: 369px;
+
+  background: #004d99;
+  opacity: 0.5;
+  border-radius: 3px;
+
+  color: #002e5c;
 }
