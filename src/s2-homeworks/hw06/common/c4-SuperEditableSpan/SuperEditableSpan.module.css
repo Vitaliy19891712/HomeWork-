@@ -2,9 +2,19 @@
 }
 
 .span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0080ff;
 }
 
 .input {
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  width: 276px;
+  height: 36px;
 }
 
 .pen {
