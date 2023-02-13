@@ -1,9 +1,19 @@
 .select {
+  background: #ffffff;
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  width: 165px;
+  height: 24px;
 }
 
 .select:focus {
+  /* color: #0066cc; */
 }
-
-
+.select:hover {
+}
 .option:hover {
+  /* color: #0066cc; */
+}
+.option:focus {
+  /* color: #0066cc; */
 }
