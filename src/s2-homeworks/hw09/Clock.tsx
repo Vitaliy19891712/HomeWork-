@@ -35,7 +35,7 @@ function Clock() {
     // пишут студенты // спрятать дату если мышка не наведена
   };
 
-  const stringTime = date.toLocaleTimeString() || <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+  const stringTime = date.toLocaleTimeString("ru-RU") || <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
   const stringDate = date.toLocaleDateString("ru-RU", {
     year: "numeric",
     month: "2-digit",
