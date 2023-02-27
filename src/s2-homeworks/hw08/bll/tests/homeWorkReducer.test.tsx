@@ -21,6 +21,8 @@ test('sort name up', () => {
         payload: 'up',
     })
 
+
+    
     expect(newState[0]._id).toBe(1)
 })
 test('sort name down', () => {
