@@ -7,22 +7,12 @@ import s2 from "../../s1-main/App.module.css";
 import { Loader } from "./Loader";
 import { AnyAction, Dispatch } from "redux";
 
-/*
- * 1 - в файле loadingReducer.ts дописать типы и логику
- * 2 - получить isLoading из редакса
- * 3 - дописать функцию setLoading
- * 4 - сделать стили в соответствии с дизайном
- * */
 
 const HW10 = () => {
-  // useSelector, useDispatch // пишет студент
   const isLoading = useSelector((state: AppStoreType) => state.loading.isLoading);
   const dispatch = useDispatch();
 
   const setLoading = () => {
-    // пишет студент // показать крутилку на 1,5 секунд
-    // dispatch
-    // setTimeout
     dispatch(loadingAC(true));
     setTimeout(() => {
       dispatch(loadingAC(false));
