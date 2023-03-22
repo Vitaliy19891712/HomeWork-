@@ -21,7 +21,6 @@ const themes = [
 const HW12 = () => {
   // взять ид темы из редакса
   const themeId = useSelector((state: any) => state.theme.themeId);
-  let theme = themes.filter((t) => t.id === themeId)[0];
 
   const dispatch = useDispatch();
 
