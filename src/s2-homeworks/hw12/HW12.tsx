@@ -20,11 +20,11 @@ const themes = [
 
 const HW12 = () => {
   // взять ид темы из редакса
-  const themeId = useSelector((state: any): number => state.theme.themeId);
+  const themeId = useSelector((state: any): string => state.theme.themeId);
 
   const dispatch = useDispatch();
 
-  const change = (id: number) => {
+  const change = (id: string) => {
     // дописать функцию
     dispatch(changeThemeId(id));
   };
