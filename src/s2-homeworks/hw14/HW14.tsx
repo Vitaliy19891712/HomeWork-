@@ -14,11 +14,9 @@ import { useSearchParams } from "react-router-dom";
  * */
 
 const getTechs = (find: string) => {
-  return axios
-    .get<{ techs: string[] }>("https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test2", { params: { find } })
-    .catch((e) => {
-      alert(e.response?.data?.errorText || e.message);
-    });
+  return axios.get<{ techs: string[] }>("https://samurai.it-incubator.io/api/3.0/homework/test2", { params: { find } }).catch((e) => {
+    alert(e.response?.data?.errorText || e.message);
+  });
 };
 
 const HW14 = () => {
