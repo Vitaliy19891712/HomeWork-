@@ -86,13 +86,14 @@ const HW15 = () => {
   }, []);
 
   const mappedTechs = techs.map((t) => {
+    
     return (
       <div key={t.id} className={s.row}>
-        <div id={`hw15-tech-1`} className={s.tech}>
+        <div id={"hw15-tech-" + t.id} className={s.tech}>
           {t.tech}
         </div>
 
-        <div id={`hw15-developer-1`} className={s.developer}>
+        <div id={"hw15-developer-" + t.id} className={s.developer}>
           {t.developer}
         </div>
       </div>
