@@ -62,7 +62,7 @@ const HW15 = () => {
   const onChangePagination = (newPage: number, newCount: number) => {
     // делает студент
     setPage(newPage);
-    
+
     setCount(newCount);
     sendQuery({ sort, page: newPage, count: newCount });
     setSearchParams({ sort: String(sort), page: String(newPage), count: String(newCount) });
@@ -85,45 +85,50 @@ const HW15 = () => {
     setCount(+params.count || 4);
   }, []);
 
-  const mappedTechs = techs.map((t) => (
-    <div key={t.id} className={s.row}>
-      <div id={"hw15-tech-" + t.id} className={s.tech}>
-        {t.tech}
-      </div>
+  const mappedTechs = techs.map((t) => {
+    debugger;
+    return (
+      <div key={t.id} className={s.row}>
+        <div id={`hw15-tech-${t.id}`} className={s.tech}>
+          {t.tech}
+        </div>
 
-      <div id={"hw15-developer-" + t.id} className={s.developer}>
-        {t.developer}
+        <div id={`hw15-developer-${t.id}`} className={s.developer}>
+          {t.developer}
+        </div>
       </div>
-    </div>
-  ));
+    );
+  });
 
   return (
     <div id={"hw15"}>
       <div className={s2.hwTitle}>Homework #15</div>
 
-      <div className={s2.hw}>
-        {idLoading && (
+      {idLoading ? (
+        <div className={s2.hw}>
           <div id={"hw15-loading"} className={s.loading}>
             Loading...
           </div>
-        )}
-
-        <SuperPagination page={page} itemsCountForPage={count} totalCount={totalCount} onChange={onChangePagination} />
-
-        <div className={s.rowHeader}>
-          <div className={s.techHeader}>
-            tech
-            <SuperSort sort={sort} value={"tech"} onChange={onChangeSort} />
-          </div>
-
-          <div className={s.developerHeader}>
-            developer
-            <SuperSort sort={sort} value={"developer"} onChange={onChangeSort} />
-          </div>
         </div>
+      ) : (
+        <div className={s2.hw}>
+          <SuperPagination page={page} itemsCountForPage={count} totalCount={totalCount} onChange={onChangePagination} />
 
-        {mappedTechs}
-      </div>
+          <div className={s.rowHeader}>
+            <div className={s.techHeader}>
+              tech
+              <SuperSort sort={sort} value={"tech"} onChange={onChangeSort} />
+            </div>
+
+            <div className={s.developerHeader}>
+              developer
+              <SuperSort sort={sort} value={"developer"} onChange={onChangeSort} />
+            </div>
+          </div>
+
+          {mappedTechs}
+        </div>
+      )}
     </div>
   );
 };
